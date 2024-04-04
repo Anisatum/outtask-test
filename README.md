@@ -10,9 +10,9 @@
 ![screenshot](https://github.com/Anisatum/outtask-test/assets/157124339/ca593164-b79f-44b1-9141-7a955426289c)
 
 - Routes:
-- `http://localhost/` (website)
-- `http://localhost/api/employees/get` (API fetching / syncing with API)
-- `http://localhost/api/employees/delete` (deleting employees)
+- `http://localhost:8000/` (website)
+- `http://localhost:8000/api/employees/get` (API fetching / syncing with API)
+- `http://localhost:8000/api/employees/delete` (deleting employees)
 
 ## CSV export 
 
