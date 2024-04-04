@@ -12,6 +12,11 @@ class EmployeeImportService
 
     }
     public function sync() {
-        $this->employeeConnector->fetchEmployees();
+        $employees = $this->employeeConnector->fetchEmployees();
+
+        foreach ($employees as $employee) {
+            // Validate?
+            $employee->save();
+        }
     }
 }
