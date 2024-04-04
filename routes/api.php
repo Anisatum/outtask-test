@@ -16,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/sync_api', [SyncController::class, 'sync']);
+Route::get('/delete', [SyncController::class, 'delete']);
