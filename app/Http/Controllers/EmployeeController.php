@@ -7,7 +7,7 @@ use App\Services\EmployeeImportService;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 
-class SyncController extends Controller
+class EmployeeController extends Controller
 {
     public function __construct(
         protected EmployeeImportService $employeeImportService,

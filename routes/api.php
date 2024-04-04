@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\SyncController;
+use App\Http\Controllers\EmployeeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -15,5 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/sync_api', [SyncController::class, 'sync']);
-Route::get('/delete', [SyncController::class, 'delete']);
+Route::get('/employees/get', [EmployeeController::class, 'sync']);
+Route::get('/employees/delete', [EmployeeController::class, 'delete']);

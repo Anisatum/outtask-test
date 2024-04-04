@@ -35,8 +35,8 @@
                     <div class="flex flex-col">
                         <div class="flex flex-row p-6">
                             <div class="flex items-center">
-                                <div id="syncAPI" style="cursor: pointer;" class="flex ml-4 text-lg leading-7 font-semibold"><span class="underline text-gray-900 dark:text-white">Sync API</span></div>
-                                <div id="deleteEmployees" style="cursor: pointer;" class="flex ml-4 text-lg leading-7 font-semibold"><span class="underline text-gray-900 dark:text-white">Delete Employees</span></div>
+                                <button id="syncAPI" style="cursor: pointer;" class="flex bg-white dark:bg-gray-900 ml-4 text-lg leading-7 font-semibold"><span class="underline text-gray-900 dark:text-white">Sync API</span></button>
+                                <button id="deleteEmployees" style="cursor: pointer;" class="flex bg-white dark:bg-gray-900 ml-4 text-lg leading-7 font-semibold"><span class="underline text-gray-900 dark:text-white">Delete Employees</span></button>
                             </div>
                         </div>
                         <div class="flex flex-row p-6">
@@ -58,7 +58,7 @@
 
         function syncAPI() {
             let xhr = new XMLHttpRequest();
-            xhr.open( "GET", '/api/sync_api', true );
+            xhr.open( "GET", '/api/employees/get', true );
             xhr.send();
             xhr.responseType = "json";
             xhr.onload = () => {
@@ -72,7 +72,7 @@
 
         function deleteEmployees() {
             let xhr = new XMLHttpRequest();
-            xhr.open( "GET", '/api/delete', true );
+            xhr.open( "GET", '/api/employees/delete', true );
             xhr.send();
             xhr.responseType = "json";
             xhr.onload = () => {
