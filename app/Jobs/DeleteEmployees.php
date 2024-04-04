@@ -31,6 +31,7 @@ class DeleteEmployees implements ShouldQueue
      */
     public function handle()
     {
+        DB::table('contracts')->delete();
         DB::table('employees')->delete();
     }
 }
