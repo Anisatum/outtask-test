@@ -19,7 +19,10 @@ class SyncController extends Controller
     {
         try {
             $this->employeeImportService->sync();
-            return response()->json(["success" => "true"]);
+            return response()->json([
+                "success" => "true",
+                "msg" => "Syncing employees succesful",
+            ]);
         } catch (\Throwable $e) {
             return response()->json([
                 "success" => "false",
@@ -32,10 +35,14 @@ class SyncController extends Controller
     {
         try {
             DeleteEmployees::dispatch();
-            return response()->json(["success" => "true"]);
+            return response()->json([
+                "success" => "true",
+                "msg" => "Deleting employees queued",
+            ]);
         } catch (\Throwable $e) {
             return response()->json([
                 "success" => "false",
+                "msg" => "Deleting employees failed",
                 "error" => $e->getMessage(),
             ]);
         }
